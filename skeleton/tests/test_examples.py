@@ -261,19 +261,21 @@ class TestBasicPackage(TestCase):
             self.assertTrue(tmp.exists('README.rst'))
             self.assertTrue(tmp.exists('foo/__init__.py'))
 
-            setup = tmp.join('setup.py')
+            setup = 'setup.py'
             # Test egg_info can be run
             proc = subprocess.Popen(
                 [sys.executable, setup, 'egg_info'],
                 shell=False,
-                stdout=subprocess.PIPE)
+                stdout=subprocess.PIPE,
+                cwd=tmp.path)
             self.assertEqual(proc.wait(), 0)
 
             # Test classifiers
             proc = subprocess.Popen(
                 [sys.executable, setup, '--classifiers'],
                 shell=False,
-                stdout=subprocess.PIPE)
+                stdout=subprocess.PIPE,
+                cwd=tmp.path)
             self.assertEqual(proc.wait(), 0)
             classifiers = proc.stdout.read().decode().splitlines()
             self.assertTrue(

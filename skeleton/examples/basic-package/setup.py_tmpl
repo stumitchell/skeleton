@@ -34,7 +34,6 @@ setup(
     license=read_file('LICENSE'),
     namespace_packages={ns_packages!r},
     packages={packages!r},
-    package_dir = {{'': os.path.dirname(__file__)}},
     include_package_data=True,
     zip_safe=False,
     install_requires=[
