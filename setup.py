@@ -22,7 +22,7 @@ def read_file(name):
 
 
 PROJECT = 'skeleton'
-VERSION = '0.6'
+VERSION = '0.6.1'
 URL = 'http://dinoboff.github.com/skeleton'
 AUTHOR = 'Damien Lebrun'
 AUTHOR_EMAIL = 'dinoboff@gmail.com'
@@ -57,6 +57,11 @@ setup(
     entry_points={
         'virtualenvwrapper.project.template': [
             'package = skeleton.examples.basicpackage:virtualenv_warpper_hook',
+            ],
+       'console_scripts': [
+            'skeleton_module = skeleton.examples.mkmodule:main',
+            'skeleton_package = skeleton.examples.basicpackage:main',
+            'skeleton_package_sphinx = skeleton.examples.sphinxpackage:main',
             ],
         },
     classifiers=[

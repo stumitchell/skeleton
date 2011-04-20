@@ -1,0 +1,23 @@
+=======================================
+Welcome to {project_name}'s documentation!
+=======================================
+
+:Author: {author} <{author_email}>
+:Date: |today|
+:Description: {short_description}
+
+
+.. toctree::
+   :maxdepth: 2
+   
+   overview
+   installation
+   history
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

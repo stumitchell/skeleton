@@ -1,0 +1,10 @@
+{project_name} provides {package_name}
+
+{short_description}
+
+TODO
+----
+
+Place the rest of the readme file, in rst format, here.
+
+This is also used on pypi as the long_description
