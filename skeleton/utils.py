@@ -129,6 +129,7 @@ def prompt(prompt_):
     """
     result = raw_input(prompt_)
     try:
-        return result.decode(sys.stdin.encoding)
+        return result
+        #return result.decode(sys.stdin.encoding)
     except AttributeError:
         return result
